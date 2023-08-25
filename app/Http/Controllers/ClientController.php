@@ -81,7 +81,6 @@ class ClientController extends Controller
     public function show($id)
     {
         $client = Client::findOrFail($id);
-        //$client = DB::table('clients')->select('name','company')->where('id', $id)->get();
 
         $response = [
             'success' => true,
@@ -111,8 +110,10 @@ class ClientController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $client = Client::findOrFail($id);
 
+        
+        $client = Client::findOrFail($id);
+        
         $client->name = $request->name;
         $client->company = $request->company;
 

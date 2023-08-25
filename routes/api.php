@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProposalController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\SolarInquiryController;
 use App\Http\Controllers\Api\AuthController;
 
 /*
@@ -19,7 +20,7 @@ use App\Http\Controllers\Api\AuthController;
 */
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
-    
+Route::resource('solar_inquiries', SolarInquiryController::class);
 Route::middleware('auth:sanctum')->group(function () {
     Route::resource('clients', ClientController::class);  
     Route::resource('proposals', ProposalController::class);  
