@@ -45,28 +45,28 @@ class SolarInquiryController extends Controller
      */
     public function store(Request $request)
     {
-        $validator = Validator::make($request->all(), [
-            'zip' => 'required',
-            'is_home_owner' => 'required',
-            'type_of_home' => 'required',
-            'average_monthly_bill' => 'required',
-            'electricity_provider' => 'required',
-            'shade' => 'required',
-            'solar_considering' => 'required',
-            'credit_score' => 'required',
-            'address' => 'required',
-            'email' => 'required',
-            'first_name' => 'required',
-            'last_name' => 'required',
-            'phone' => 'required'
-        ]);
-        if($validator->fails()){
-            $response = [
-                'success' => false,
-                'message' => $validator->errors()
-            ];
-            return response()->json($response, 400);
-        }
+        // $validator = Validator::make($request->all(), [
+        //     'zip' => 'required',
+        //     'is_home_owner' => 'required',
+        //     'type_of_home' => 'required',
+        //     'average_monthly_bill' => 'required',
+        //     'electricity_provider' => 'required',
+        //     'shade' => 'required',
+        //     'solar_considering' => 'required',
+        //     'credit_score' => 'required',
+        //     'address' => 'required',
+        //     'email' => 'required',
+        //     'first_name' => 'required',
+        //     'last_name' => 'required',
+        //     'phone' => 'required'
+        // ]);
+        // if($validator->fails()){
+        //     $response = [
+        //         'success' => false,
+        //         'message' => $validator->errors()
+        //     ];
+        //     return response()->json($response, 400);
+        // }
         
         $solar_inquiries = new SolarInquiry();
 
