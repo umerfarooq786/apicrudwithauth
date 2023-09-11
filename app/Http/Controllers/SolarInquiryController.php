@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 use App\Models\SolarInquiry;
+use App\Mail\SolarEmail;
 use DB;
 
 class SolarInquiryController extends Controller
@@ -92,6 +94,8 @@ class SolarInquiryController extends Controller
             'message' => 'Inquiry has been submitted Successfully'
         ];
 
+        //Mail::to($solar_inquiries->email)->send(new SolarEmail());
+        
         return response()->json($response, 200);
     }
 
