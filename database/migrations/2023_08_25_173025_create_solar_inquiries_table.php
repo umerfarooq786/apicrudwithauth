@@ -17,18 +17,12 @@ class CreateSolarInquiriesTable extends Migration
             $table->id();
             $table->string('zip')->nullable;
             $table->boolean('is_home_owner')->nullable;
-            $table->string('type_of_home')->nullable;
-            $table->string('average_monthly_bill')->nullable;
-            $table->string('electricity_provider')->nullable;
-            $table->string('shade')->nullable;
-            $table->string('solar_considering')->nullable;
-            $table->string('credit_score')->nullable;
             $table->string('address')->nullable;
             $table->string('email')->nullable;
-            $table->string('first_name')->nullable;
-            $table->string('last_name')->nullable;
+            $table->string('full_name')->nullable;
             $table->string('phone')->nullable;
-            
+            $table->text('message')->nullable;
+
             $table->timestamps();
         });
     }

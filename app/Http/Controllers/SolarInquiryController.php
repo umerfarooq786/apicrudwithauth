@@ -74,18 +74,11 @@ class SolarInquiryController extends Controller
 
         $solar_inquiries->zip =  $request->zip;
         $solar_inquiries->is_home_owner =  $request->is_home_owner;
-        $solar_inquiries->type_of_home =  $request->type_of_home;
-        $solar_inquiries->average_monthly_bill =  $request->average_monthly_bill;
-        $solar_inquiries->electricity_provider =  $request->electricity_provider;
-        $solar_inquiries->shade =  $request->shade;
-        $solar_inquiries->solar_considering =  json_encode($request->solar_considering); 
-        $solar_inquiries->credit_score =  $request->credit_score;
         $solar_inquiries->address =  $request->address;
         $solar_inquiries->email =  $request->email;
-        $solar_inquiries->first_name =  $request->first_name;
-        $solar_inquiries->last_name = $request->last_name;
+        $solar_inquiries->full_name =  $request->full_name;
         $solar_inquiries->phone =  $request->phone;        
-        
+        $solar_inquiries->message =  $request->message;
         $solar_inquiries->save();
 
         $response = [
