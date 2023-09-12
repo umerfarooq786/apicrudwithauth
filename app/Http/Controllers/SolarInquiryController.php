@@ -79,6 +79,7 @@ class SolarInquiryController extends Controller
         $solar_inquiries->full_name =  $request->full_name;
         $solar_inquiries->phone =  $request->phone;        
         $solar_inquiries->message =  $request->message;
+        
         $solar_inquiries->save();
 
         $response = [
