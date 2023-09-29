@@ -15,7 +15,6 @@ class CreateSolarInquiriesTable extends Migration
     {
         Schema::create('solar_inquiries', function (Blueprint $table) {
             $table->id();
-            
             $table->string('zip')->nullable();
             $table->boolean('is_home_owner')->nullable();
             $table->string('address')->nullable();
